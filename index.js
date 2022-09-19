@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let popularHeader = document.createElement("header")
   popularHeader.innerHTML = `
-    <h2>Popular</h2>
-    <a href '#'>Show More</a>
+    <h2 class="flexitems">Popular</h2>
+    <a href '#' class="flexitems right-flexitems">Show More</a>
   `
   popularElm.append(popularHeader)
 
@@ -45,10 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
         let article = document.createElement("article")
         article.classList.add("movie-article")
         article.innerHTML = `
-          <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
-          <div>
+          <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="img-a" alt="${movie.title} poster">
+          <div class="popular-text">
             <h3>${movie.title} </h3>
-            <p>${movie.vote_average}/10 IMDb</p>
+            <p class="gray-ptag" >${movie.vote_average}/10 IMDb</p>
             <p class="genres"></p>
           </div>
         `
