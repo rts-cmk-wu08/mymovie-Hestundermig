@@ -1,1 +1,15 @@
-
+/* 
+body{
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.cards {
+    width: 12rem;
+    height: 15rem;
+    display: flex;
+}
+.sliding{
+    display: flex;
+    width: 100rem;
+    overflow-x: scroll;
+} */
