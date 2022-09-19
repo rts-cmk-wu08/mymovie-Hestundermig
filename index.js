@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         movie.genre_ids.forEach(id => {
           let currentGenre = genres.find(genre => genre.id == id)
           let genreSpan = document.createElement("span")
-          genreSpan.classlist.add("genre__span")
+          genreSpan.classList.add("genre__pill")
           genreSpan.innerText = currentGenre.name
           genreElm.append(genreSpan)
         })
