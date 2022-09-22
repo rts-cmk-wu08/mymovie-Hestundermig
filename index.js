@@ -21,8 +21,10 @@
 
         div.innerHTML = `
             <img src="https://image.tmdb.org/t/p/original${nowPlaying.backdrop_path}" class="xflex" alt="">
-            <p class="${nowplaying.title}"></p>
-            <p class="${nowPlaying.vote_average}"></p>
+            <div class="nowPlayingTxt">
+              <p class="bolder">${nowPlaying.title}</p>
+              <p class="gray-ptag">${nowPlaying.vote_average}/10 IMDb</p>
+            </div>
             `;
 
         articleElm.append(div);

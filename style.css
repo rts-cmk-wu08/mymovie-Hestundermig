@@ -1,6 +1,5 @@
 
 body {
-  display: flex;
   position: relative;
   left: 1rem;
   padding: 0;
@@ -55,19 +54,13 @@ span {
 }
 .article{
     display: flex;
+    gap: 2rem;
     width: 100rem;
     border-radius: 20px;
     overflow-x: scroll;
 }
-.cards{
-    display: flex;
-    padding: 1rem;
-    border-radius: 20px;
-}
 .xflex{
     border-radius: 20px; 
-    position: relative;
-    left: -1rem;
     width: 9rem;
     height: 13rem;
 }
@@ -96,4 +89,10 @@ footer{
 }
 .colorchange {
   color: darkblue;
+}
+.nowPlayingTxt {
+  font-size: 1rem;
+}
+.bolder {
+  font-weight: 800;
 }
