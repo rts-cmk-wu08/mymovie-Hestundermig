@@ -4,9 +4,7 @@
   let BaseURL = "https://api.themoviedb.org/3";
   let apiKey = "ee7c91fa743a5076c72bd818029cb90d";
 
-  fetch(
-    "https://api.themoviedb.org/3/movie/now_playing?api_key=f6cd4ea3a6cc09f282a877cc9c2daed4&language=en-US&page=1"
-  )
+  fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=f6cd4ea3a6cc09f282a877cc9c2daed4&language=en-US&page=1")
     .then((nowPlaying) => nowPlaying.json())
 
     .then((nowPlay) => {
@@ -47,11 +45,16 @@
   let footerElm = document.createElement("footer");
   wrapperElm.append(footerElm);
 
+  footerElm.innerHTML = `
+    <i class="fa-solid fa-camcorder camera fa"></i>
+    <i class="fa-thin fa-ticket ticket fa"></i>
+    <i class="fa-regular fa-bookmark bookmark fa"></i>
+  `
+
   headerElm.innerHTML = `
   <h1 class="MyMovies">MyMovies</h1>
   <h2 class="flexheaderelm nowshowing-seemore">Now Showing</h2>
   <button class="flexheaderelm right-flexitems buttonfixed">See More</button>
-
   `;
 
   let popularElm = document.createElement("section");
@@ -75,7 +78,7 @@
         let article = document.createElement("article");
         article.classList.add("movie-article");
         article.innerHTML = `
-          <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="img-a" alt="${movie.title} poster">
+          <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" onclick="window.location.href='detail.html?id=${movie.id}';"  class="img-a" alt="${movie.title} poster">
           <div class="popular-text">
             <h3>${movie.title} </h3>
             <p class="gray-ptag" >${movie.vote_average}/10 IMDb</p>
