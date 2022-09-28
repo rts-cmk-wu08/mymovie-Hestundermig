@@ -46,7 +46,7 @@
   wrapperElm.append(footerElm);
 
   footerElm.innerHTML = `
-    <i class="fa-solid fa-camcorder camera fa"></i>
+    <i class="fa-solid fa-camera fa fa-icons"></i>
     <i class="fa-thin fa-ticket ticket fa"></i>
     <i class="fa-regular fa-bookmark bookmark fa"></i>
   `
@@ -81,8 +81,10 @@
           <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" onclick="window.location.href='detail.html?id=${movie.id}';"  class="img-a" alt="${movie.title} poster">
           <div class="popular-text">
             <h3>${movie.title} </h3>
-            <p class="gray-ptag" >${movie.vote_average}/10 IMDb</p>
-            <p class="genres"></p>
+            <section class="genrestag">
+              <p class="gray-ptag" >${movie.vote_average}/10 IMDb</p>
+              <p class="genres"></p>  
+            </section>
           </div>
         `;
         popularMovies.append(article);

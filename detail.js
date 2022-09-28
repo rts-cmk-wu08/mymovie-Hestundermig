@@ -16,9 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         div.classList.add("cards");
         
         div.innerHTML = `
-            <div>
             <img src="https://image.tmdb.org/t/p/original${movie.poster_path}"  alt="">
-              </div>
               `;
         articleElm.append(div);
       });
