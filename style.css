@@ -53,7 +53,9 @@ span{
   padding: 0.2rem;
   margin: 0.2rem;
   max-width: 20%;
-  border-radius: 20px;
+}
+.starblock {
+  display: inline-flex;
 }
 .popular{
   height: 40rem;
@@ -77,10 +79,10 @@ footer{
   background-color: white;
   width: 100%;
   height: 5rem;
+  position: fixed;
   left: 0;
   bottom: 0;
-  top: 2rem;
-  position: fixed;
+  color: grey;
 }
 .flexheaderelm{
   display: flex;
@@ -116,7 +118,3 @@ footer{
 .ticket{
   rotate: 90deg;
 }
-
-/* detailside style */
-
-

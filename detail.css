@@ -1,0 +1,65 @@
+
+body {
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    margin: 0;
+    padding: 0;
+}
+.left{
+    position: relative;
+    left: 2rem;
+}
+.toppicture{
+    width: 100vw;
+    height: 19rem;
+}
+.movietitle{
+    max-width: 25rem;
+    display: inline-block;
+}
+.flex-movietitle {
+    display: inline-block;
+    position: relative;
+    left: 11rem;
+}
+.cardRating{
+    display: inline-block;
+    padding-left: 0.25rem;
+}
+.flexRating{
+    display: inline-block;
+}
+.description{
+    width: 20rem;
+    color: darkblue;
+}
+.descriptionTxt{
+    color: grey;
+}
+.cast{
+    color: darkblue;
+    display: inline-block;
+}
+.seeMoreBtn{
+    text-decoration: none;
+    color: gray;
+    border: 2px solid gray;
+    padding: 0.3rem;
+    border-radius: 20px;
+    background-color: white;
+    display: inline-block;
+    position: relative;
+    left: 13rem;
+}
+.castImg{
+    width: 3rem;
+    height: 3rem;
+}
+.all__cast__img__container{
+    display: inline-flex;
+    position: relative;
+    left: -2.5rem;
+}
+.fa-star{
+    color: yellow;
+}

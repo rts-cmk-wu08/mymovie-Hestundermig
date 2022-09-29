@@ -82,6 +82,9 @@
           <div class="popular-text">
             <h3>${movie.title} </h3>
             <section class="genrestag">
+              <span class="starblock"> 
+                <i class="fa-solid fa-star"></i>
+              </span>
               <p class="gray-ptag" >${movie.vote_average}/10 IMDb</p>
               <p class="genres"></p>  
             </section>
