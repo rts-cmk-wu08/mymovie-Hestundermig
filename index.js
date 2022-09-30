@@ -83,7 +83,7 @@
             <h3>${movie.title} </h3>
             <section class="genrestag">
               <span class="starblock"> 
-                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star forsidestar"></i>
               </span>
               <p class="gray-ptag" >${movie.vote_average}/10 IMDb</p>
               <p class="genres"></p>  

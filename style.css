@@ -17,6 +17,10 @@ body{
   position: relative;
   left: 10rem;
 }
+.forsidestar{
+  background-color: white;
+  color: yellow;
+}
 .buttonfixed{
   position: relative;
   left: 16rem;

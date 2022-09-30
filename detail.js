@@ -25,41 +25,68 @@ document.addEventListener("DOMContentLoaded", () => {
 
           <article>
             <img src="https://image.tmdb.org/t/p/original${details.poster_path}" class="toppicture"  alt="">
-            <h1 class="movietitle left">${details.title}</h1>
-            <i class="fa-regular fa-bookmark flex-movietitle"></i>  
-          </article>
-          
-          <div class="card__rating__container left">
-            <i class="fa-solid fa-star flexRating"></i>
-            <p class="cardRating">${details.vote_average.toFixed(1)}/10 IMDb</p>
-          </div>
-          
-          <section class="description left">
-            <h2 class="description">Description</h2>
-            <p class="descriptionTxt">${details.overview}</p>
-          </section>
-          
-          <div class="cast__container left">
-            <div class="cast__seeMoreContainer">
-              <h3 class="cast">Cast</h3>
-              <button class="seeMoreBtn">See more</button>
-        </div>
-        <div class="all__cast__img__container">
-          </div>
-        </div>
-        
-        `;
-        articleElm.append(div);
-      });
+              <h1 class="movietitle left">${details.title}</h1>
+              <i class="fa-regular fa-bookmark flex-movietitle"></i>  
+            </article>
+            
+            <div class="card__rating__container left">
+              <i class="fa-solid fa-star flexRating"></i>
+              <p class="cardRating">${details.vote_average.toFixed(1)}/10 IMDb</p>
+            </div>
+            
+            <section class="description left">
+              <h2 class="description">Description</h2>
+              <p class="descriptionTxt">${details.overview}</p>
+            </section>
+            
+            <div class="cast__container left">
+              <div class="cast__seeMoreContainer">
+                <h3 class="cast">Cast</h3>
+                <button class="seeMoreBtn">See more</button>
+              </div>
+              <div class="all__cast__img__container">
+                </div>
+              </div>
+
+              `;
+
+            articleElm.append(div);
+
+            let pGenre = document.querySelector(".card__genreContainer")
+
+            details.genres.forEach( (genre) => {
+
+            let p = document.createElement("p")
+            p.classList.add("genre")
+            p.innerHTML = `
+            ${genre.name}
+            `
+            pGenre.append(p)
+            })
+            let pLanguage = document.querySelector(".card__infoSpokenLanguage")
+
+            details.spoken_languages.forEach( (language) => {
+            let span = document.createElement("span")
+            span.classList.add("languageSpan")
+            span.innerHTML = `
+
+            ${language.english_name}
+            `
+            pLanguage.append(span)
+
+            })
+});
+
       
-      fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${apiKey}&language=en-US`)
-      .then(actors => actors.json())
-      .then(actor => {
-        
-        
-        let actorsImg = document.querySelector(".all__cast__img__container")
-        
-        const actorShort = actor.cast.slice(0,4)
+
+fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${apiKey}&language=en-US`)
+.then(actors => actors.json())
+.then(actor => {
+  
+  
+  let actorsImg = document.querySelector(".all__cast__img__container")
+  
+  const actorShort = actor.cast.slice(0,4)
         
         actorShort.forEach((actor) => {
           
@@ -81,6 +108,5 @@ document.addEventListener("DOMContentLoaded", () => {
     let articleElm = document.createElement("article");
     articleElm.classList.add("article");
     wrapperElm.append(articleElm);
-
 
 });

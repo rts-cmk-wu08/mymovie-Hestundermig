@@ -1,7 +1,5 @@
 
 body {
-    overflow-x: hidden;
-    /* overflow-y: hidden; */
     margin: 0;
     padding: 0;
 }
@@ -25,6 +23,7 @@ body {
 .cardRating{
     display: inline-block;
     padding-left: 0.25rem;
+    color: grey;
 }
 .flexRating{
     display: inline-block;
@@ -58,7 +57,13 @@ body {
 .all__cast__img__container{
     display: inline-flex;
     position: relative;
-    left: -2.5rem;
+    left: 0rem;
+}
+.cast__img__container{
+    margin: 0;
+}
+.castImg{
+    border-radius: 8px;
 }
 .fa-star{
     color: yellow;
