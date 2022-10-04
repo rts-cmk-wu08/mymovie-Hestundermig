@@ -1,4 +1,8 @@
+  import { genres } from "./genres.js"
+  import { makeElement } from "./makeElement.js"
+
   document.addEventListener("DOMContentLoaded", () => {
+
   console.log(genres);
 
   let BaseURL = "https://api.themoviedb.org/3";
@@ -31,13 +35,19 @@
 
   let wrapperElm = document.querySelector(".wrapper");
 
-  let headerElm = document.createElement("header");
-  headerElm.classList.add("header");
-  wrapperElm.append(headerElm);
+  let headerElm = makeElement("header", "header")
+  wrapperElm.append(headerElm)
 
-  let articleElm = document.createElement("article");
-  articleElm.classList.add("article");
-  wrapperElm.append(articleElm);
+  // let headerElm = document.createElement("header");
+  // headerElm.classList.add("header");
+  // wrapperElm.append(headerElm);
+
+  let articleElm = makeElement("article", "article")
+  wrapperElm.append(articleElm)
+
+  // let articleElm = document.createElement("article");
+  // articleElm.classList.add("article");
+  // wrapperElm.append(articleElm);
 
   let mainElm = document.createElement("main");
   wrapperElm.append(mainElm);
